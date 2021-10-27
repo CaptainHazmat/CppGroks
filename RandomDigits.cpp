@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>	// contains rand(), srand()
 #include <ctime> // to randomize digits (time)
-#include <windows.h> // to delay running
+#include <windows.h> // to delay running Sleep()
 using namespace std;
 
 int main()
