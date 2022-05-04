@@ -1,17 +1,28 @@
 #include <iostream>
 #include <cstdlib>	// contains rand(), srand()
-#include <ctime> // to randomize digits (time)
 #include <windows.h> // to delay running Sleep()
 using namespace std;
 
+bool Result(int num, int randn) {
+	bool ans;
+	ans = (num == randn ? true : false);
+	return ans;
+}
+
 int main()
 {
-	int dmg;
-	cout << "Enemy appears" << endl;
-	cout << "Enemy uses Battle axe\n";
 	srand(time(NULL));
-	dmg = rand() % 20;	// in the range up to 20
-	Sleep(1000); // delay (thousandth of a second)
-	cout << "Enemy damaged you to -" << dmg << " HP\n";
-	return 0;
+	int randn = rand() % 10;
+	int num = 5;
+	bool res;
+	cout << "IF YOUR NUM = " << randn << " :\nYour num : ";
+	cin >> num;
+	res = Result(num, randn);
+	Sleep(1000);
+	if (res == true) {
+		cout << "Your num is equal to " << randn;
+	}
+	else {
+		cout << "Your num is not equal to " << randn;
+	}
 }
