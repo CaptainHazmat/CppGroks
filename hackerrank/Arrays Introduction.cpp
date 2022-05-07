@@ -1,16 +1,20 @@
 #include <iostream>
 using namespace std;
 
+
 int main()
 {
-    int n;
-    cin >> n;
-    int* arr = new int[n];
-    for (int i = 0; i < n; i++) {
+    int size;
+    cout << "Enter the number of size for array: ";
+    cin >> size;
+    int* arr= new int[size];
+    for (int i = 0; i < size; i++) {
+        int arrnum = i;
+        cout << ++arrnum << ": ";
         cin >> arr[i];
     }
-    for (int j = n - 1; j >= 0; j--) {
-        cout << arr[j] << " ";
+    for (int j = --size; j >= 0; j--) {
+        cout << arr[j];
     }
     delete[] arr;
     return 0;
