@@ -23,7 +23,7 @@ int Quadratic(int a, int b, int c) {
         cout << x1 * 2;
     }
     else if (D < 0)
-        cout << 0 << "\n";
+        cout << "ERROR: D < 0" << "\n";
     return 0;
 }
 
